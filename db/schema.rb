@@ -10,50 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_09_071648) do
-
-  create_table "microposts", force: :cascade do |t|
-    t.text "content"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
-    t.index ["user_id"], name: "index_microposts_on_user_id"
-  end
-
-  create_table "problems", force: :cascade do |t|
-    t.string "name"
-    t.string "givengrade"
-    t.string "setter"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "relationship_ps", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "problem_id"
-    t.string "suggestedgrade"
-    t.string "highpoint"
-    t.date "dohp"
-    t.date "firsttry"
-    t.integer "rating"
-    t.text "comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["problem_id"], name: "index_relationship_ps_on_problem_id"
-    t.index ["user_id", "problem_id"], name: "index_relationship_ps_on_user_id_and_problem_id", unique: true
-    t.index ["user_id"], name: "index_relationship_ps_on_user_id"
-  end
-
-  create_table "relationships", force: :cascade do |t|
-    t.integer "follower_id"
-    t.integer "followed_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["followed_id"], name: "index_relationships_on_followed_id"
-    t.index ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
-    t.index ["follower_id"], name: "index_relationships_on_follower_id"
-  end
+ActiveRecord::Schema.define(version: 2020_05_05_144804) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -69,6 +26,16 @@ ActiveRecord::Schema.define(version: 2019_10_09_071648) do
     t.string "reset_digest"
     t.datetime "reset_sent_at"
     t.index ["email"], name: "index_users_on_email", unique: true
+  end
+
+  create_table "workouts", force: :cascade do |t|
+    t.string "name"
+    t.string "style"
+    t.string "url"
+    t.integer "length"
+    t.string "intensity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
