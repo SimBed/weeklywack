@@ -6,7 +6,23 @@ User.create!(name:  "Dan SimBed",
              admin:     true,
              activated: true,
              activated_at: Time.zone.now)
-
+             
+User.create!(name:  "Namrata",
+             email: "namrata@thespacejuhu.in",
+             password:              "foobar",
+             password_confirmation: "foobar",
+             admin:     false,
+             activated: true,
+             activated_at: Time.zone.now)
+             
+User.create!(name:  "Tosh",
+             email: "tosh@thespacejuhu.in",
+             password:              "foobar",
+             password_confirmation: "foobar",
+             admin:     false,
+             activated: true,
+             activated_at: Time.zone.now)
+             
 User.create!(name:  "Kunal",
              email: "example@railstutorial.org",
              password:              "foobar",
@@ -14,34 +30,116 @@ User.create!(name:  "Kunal",
              admin:     false,
              activated: true,
              activated_at: Time.zone.now)
+             
 
+5.times do |n|
+  name  = Faker::Name.name
+  email = "example-#{n+1}@thespacejuhu.in"
+  password = "password"
+  User.create!(name:  name,
+               email: email,
+               password:              password,
+               password_confirmation: password,
+               activated: true,
+               activated_at: Time.zone.now)
+end
 
 #Problems
-Workout.create!(name: "Rakis Beetroot Bootcamp",
-             style: "Cardio",
-             url: "http://www.beetrootbootcamp.com",
-             length: 60,
-             intensity: "High")
+Problem.create!(name: "Babycakes",
+             givengrade: "6c",
+             setter: "unknown")
 
-Workout.create!(name: "DanZ GainZ",
-             style: "Strength",
-             url: "www.danzgainz.org",
-             length: 90,
-             intensity: "High")
+Problem.create!(name: "Excaliboy",
+             givengrade: "7a",
+             setter: "SimBed")
+             
+Problem.create!(name: "Chimpanzee",
+             givengrade: "6b+",
+             setter: "unknown")
+             
+#User-Problem Relations
 
-Workout.create!(name: "Gigis Big Bum Row",
-             style: "Cardio",
-             url: "http://www.workthatbum.in",
-             length: 30,
-             intensity: "Medium")
+RelationshipP.create!(user_id: 1,
+                  problem_id: 1,
+                  suggestedgrade: "7a",
+                  highpoint: "CR34",
+                  dohp: "4/10/2019",
+                  firsttry: "1/10/2019",
+                  rating: 2,
+                  comment: "nice route")
+                
+RelationshipP.create!(user_id: 1,
+                  problem_id: 2,
+                  suggestedgrade: "7a",
+                  highpoint: "top",
+                  dohp: "",
+                  firsttry: "",
+                  rating: 3,
+                  comment: "a Harrow classic")
+                  
+RelationshipP.create!(user_id: 1,
+                  problem_id: 3,
+                  suggestedgrade: "6c+",
+                  highpoint: "top",
+                  dohp: "28/9/2019",
+                  firsttry: "12/4/2019",
+                  rating: 2,
+                  comment: "cross-through crux")
+                  
+RelationshipP.create!(user_id: 2,
+                  problem_id: 2,
+                  suggestedgrade: "6c+",
+                  highpoint: "top",
+                  dohp: "",
+                  firsttry: "",
+                  rating: 2,
+                  comment: "didn't match")
+                  
+RelationshipP.create!(user_id: 2,
+                  problem_id: 1,
+                  suggestedgrade: "7a",
+                  highpoint: "CR4",
+                  dohp: "",
+                  firsttry: "",
+                  rating: 3,
+                  comment: "crap route")
+                  
+RelationshipP.create!(user_id: 3,
+                  problem_id: 2,
+                  suggestedgrade: "7a+",
+                  highpoint: "TL1",
+                  dohp: "",
+                  firsttry: "",
+                  rating: 3,
+                  comment: "gaston crushed me")
 
-10.times do |n|
-  name  = Faker::Superhero.name
-  style = Rails.application.config_for(:workoutinfo)["styles"]
-            .shuffle.first
-  domainend = %w[.com .in .org].shuffle.first
-  url = "www.#{name.split.join + domainend}"
-  length = [30,60,90].shuffle.first
-  intensity = %w[High Medium Low].shuffle.first
-  Workout.create!(name: name, style: style, url: url, length: length, intensity: intensity)
-        end
+
+# Microposts
+#users = User.order(:created_at).take(6)
+#50.times do
+  #content = Faker::Lorem.sentence(5)
+  #users.each { |user| user.microposts.create!(content: content) }
+#end
+
+content = "all my hotpants are in the wash"
+User.find(2).microposts.create!(content: content)
+content = "where did that item from class go?"
+User.find(2).microposts.create!(content: content)
+content = "i think i have a crush on my gym constructor"
+User.find(3).microposts.create!(content: content)
+content = "Why doesn't The Space do memberships?"
+User.find(3).microposts.create!(content: content)
+
+users = User.order(:created_at).drop(3)
+5.times do
+  content = Faker::Lorem.sentence(5)
+  users.each { |user| user.microposts.create!(content: content) }
+end
+
+# Following relationships
+#users = User.all
+#user  = users.first
+#following = users[2..50]
+#followers = users[3..40]
+#following.each { |followed| user.follow(followed) }
+#followers.each { |follower| follower.follow(user) }

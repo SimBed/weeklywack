@@ -1,6 +1,9 @@
 class StaticPagesController < ApplicationController
   def home
-    @workouts = Workout.all.order("created_at desc")
+    if logged_in?
+      @micropost  = current_user.microposts.build
+      @feed_items = current_user.feed.paginate(page: params[:page])
+    end
   end
 
 end

@@ -1,0 +1,59 @@
+<% if logged_in? %>
+<p id="notice"><%= notice %></p>
+
+<h2>My Problems</h2>
+
+<!--The default @relationship_ps variable is empty..need to specify the variable explicitly here-->
+<%= will_paginate @problems %>
+
+<table class ="Problemtable">
+  <thead>
+    <tr>
+      <th><%= sortable "name", "Name", "Name"%></th>
+      <th><%= sortable "givengrade", "Grd", "Setter's Grade"%></th>
+      <th><%= sortable "setter", "Set", "Set by"%></th>
+      <th><%= sortable "suggestedgrade", "MyGrd", "My Grade"%></th>
+      <th title= 'High Point'>High</th>
+      <th><%= sortable "dohp", "DoHP", "Date High Point First Achieved"%></th>
+      <th><%= sortable "firsttry", "1st Try", "Date of First Attempt"%></th>
+      <th><%= sortable "rating", "Rating", "Rating (0-3 star)"%></th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @problems.each do |problem| %>
+    <% rel = problem.relationship_ps.find_by(user_id: current_user.id)%>
+      <tr>
+        <td><%= problem.name %></td>
+        <td><%= problem.givengrade %></td>
+        <td><%= problem.setter %></td>
+        <td><%= rel.suggestedgrade%></td>
+        <td><%= rel.highpoint%></td>
+        <td><%= date_reformat(rel.dohp)%></td>
+        <td><%= date_reformat(rel.firsttry)%></td>
+        <td><%= rel.rating%></td>
+        <td><%= rel.comment%></td>
+        
+        <td><%= link_to 'Edit', edit_relationship_p_path(rel) %></td>
+        <td><%= link_to 'Unfollow', rel, method: :delete, data: { confirm: "Are you sure? Your personal data for #{problem.name} will be lost." } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+    <ul class="listgroup-table pl-0">
+    		<em>click underlined headings to sort:</em>
+    		  <li class="listitem-table"><div class="Grey Circle"></div> Grd = Setter's Grade</li>
+    		  <li class="listitem-table"><div class="Grey Circle"></div> Set = Set by</li> 
+    		  <li class="listitem-table"><div class="Grey Circle"></div> MyGrd = My Grade</li>
+    		  <li class="listitem-table"><div class="Grey Circle"></div> High = High Point</li>
+    		  <li class="listitem-table"><div class="Grey Circle"></div> DoHP = Date High Point First Achieved</li>
+    		  <li class="listitem-table"><div class="Grey Circle"></div> 1st Try = Date of First Attempt</li>
+    		  <li class="listitem-table"><div class="Grey Circle"></div> Rating = Rating (0-3 star)</li>
+    </ul>
+
+<% else %>
+  <%= render 'static_pages/welcome' %>
+<% end %>
+
+
