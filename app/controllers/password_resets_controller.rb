@@ -32,8 +32,7 @@ class PasswordResetsController < ApplicationController
       #and (re-)change the password (and login)
       @user.update_attribute(:reset_digest, nil)
       flash[:success] = "Password has been reset."
-      #redirect_to @user
-      redirect_to problems_path
+      redirect_to @user
     else
       render 'edit'                                     # Case (2)
     end
