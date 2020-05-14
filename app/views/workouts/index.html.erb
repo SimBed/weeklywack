@@ -29,7 +29,7 @@
 
         <% if current_user && current_user.admin? %>
         <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
-        <td><%= link_to 'Remove', workout, method: :delete, data: { confirm: "Are you sure? All workout data for #{workout.name} will be lost." } %></td>
+        <td><%= link_to 'Delete', workout, method: :delete, data: { confirm: "Are you sure? All workout data for #{workout.name} will be lost." } %></td>
         <% end %>
 
       </tr>

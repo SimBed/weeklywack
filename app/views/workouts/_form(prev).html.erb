@@ -1,5 +1,15 @@
-<%= form_for(@workout, url:object) do |form| %>
-  <%= render 'shared/error_messages', object: form.object %>
+<%= form_with(model: workout, local: true) do |form| %>
+  <% if workout.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(workout.errors.count, "error") %> prohibited this workout from being saved:</h2>
+
+      <ul>
+      <% workout.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
   <div class="field">
     <%= form.label :name %>

@@ -14,6 +14,8 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", login_path
     assert_select "a[href=?]", logout_path, count: 0
     assert_select "a[href=?]", signup_path
+    workoutlisted = Workout.all.order("created_at desc").first
+    assert_select 'a[href=?]', "http://#{workoutlisted.url}", text: workoutlisted.name
 
     get signup_path
     assert_template 'users/new'
@@ -29,6 +31,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", user_path(@nonadmin)
     assert_select "a[href=?]", edit_user_path(@nonadmin)
     assert_select "a[href=?]", logout_path
+    assert_select 'a[href=?]', "http://#{workoutlisted.url}", text: workoutlisted.name
 
     log_in_as(@admin)
     get root_path
@@ -41,5 +44,6 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", user_path(@admin)
     assert_select "a[href=?]", edit_user_path(@admin)
     assert_select "a[href=?]", logout_path
+    assert_select 'a[href=?]', "http://#{workoutlisted.url}", text: workoutlisted.name
   end
 end

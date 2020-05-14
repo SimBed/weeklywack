@@ -1,20 +1,29 @@
 workoutone:
-  name: workout1
+  name: ZZworkout1
   style: Strength
-  url: www.workout1.com
+  url: www.zzworkout1.com
   length: 30
   intensity: Low
 
 workouttwo:
-  name: workout2
+  name: ZZworkout2
   style: Cardio
-  url: www.workout2.in
+  url: www.zzworkout2.in
   length: 60
   intensity: Medium
 
 workoutthree:
-  name: workout3
+  name: ZZworkout3
   style: Yoga
-  url: www.workout3.in
+  url: www.zzworkout3.in
   length: 75
   intensity: High
+
+<% 30.times do |n| %>
+workout_<%= n %>:
+  name:  <%= "Workout#{n}" %>
+  style: Yoga
+  url: <%= "www.workout#{n}.com" %>
+  length: 75
+  intensity: High
+<% end %>

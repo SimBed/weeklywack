@@ -1,7 +1,6 @@
 class WorkoutsController < ApplicationController
-  before_action :logged_in_user, only: [:edit, :create, :update, :destroy]
   before_action :set_workout, only: [:edit, :update, :destroy]
-  #before_action :admin_user, only: :destroy
+  before_action :admin_user, only: [:edit, :update, :destroy]
 
   def index
     #@workouts = Workout.paginate(page: params[:page])
@@ -15,27 +14,30 @@ class WorkoutsController < ApplicationController
   def create
     @workout = Workout.new(workout_params)
 
-      if @workout.save
-        redirect_to workouts_path
-        flash[:success] = "New workout, #{@workout.name} added!"
-      else
-       render :new
-      end
+    if @workout.save
+      redirect_to workouts_path
+      flash[:success] = "New workout, #{@workout.name} added!"
+    else
+      render :new
+    end
   end
 
   def edit
+    #set_workout occurs via callback
   end
 
   def update
-      if @workout.update(workout_params)
-        redirect_to workouts_path
-        flash[:success] = "#{@workout.name} updated"
-      else
-        render :edit
-      end
+    #set_workout occurs via callback
+    if @workout.update(workout_params)
+      flash[:success] = "#{@workout.name} updated"
+      redirect_to workouts_path
+    else
+      render :edit
+    end
   end
 
   def destroy
+    #set_workout occurs via callback
     @workout.destroy
     flash[:success] = "#{@workout.name} deleted"
     redirect_to workouts_path
