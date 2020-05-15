@@ -1,0 +1,185 @@
+/* for accordion triangle*/
+	.panel-heading a:first-child:after {
+	  border: solid #635869;
+	  border-width: 0 0.1em 0.1em 0;
+	  display: inline-block;
+	  padding: 0.13em;
+	   transform: rotate(45deg);
+	   content:""
+	} 
+
+ /* Flex container */
+      #p-flex {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      div.p-flex {
+        width: 100%;
+      }
+	  
+      @media only screen and (min-width: 540px) {
+        div.p-flex { width: 50%; }
+      }
+	  
+      @media only screen and (min-width: 1050px) {
+        div.p-flex { width: 33%; }
+      }
+ /*     @media only screen and (min-width: 1100px) {
+        div.p-flex { width: 25%; }
+	  
+	  @media only screen and (min-width: 810px) {
+        div.p-flex { width: 25%; }
+      }	  */
+
+      div.p-flex-in {
+        box-sizing: border-box;
+        margin-left: 5px; 
+		margin-right: 5px;
+		margin-top: 5px;
+		margin-bottom: 10px;
+      /*  padding: 10px;
+	    background: #f6fff2;*/
+		background: #fff;
+        border: 1px solid #e7fcde;
+
+		position: relative;
+      }
+	  
+	  div.imgcontainer {
+		position: relative;
+		  cursor: pointer;
+		  
+	  }
+      img.p-img {
+        width: 100%;
+        height: auto;
+      }
+	  
+	  p.p-tagline {
+		color: #635869; /*dark purple*/
+		font-family: "Quicksand", "Arial";
+        font-size: 0.8em;
+		padding-left: 0.1em;
+		font-weight: bold;
+		font-style: italic;
+		margin-bottom:0;
+      }	
+	
+	  	  
+	  div.p-product {
+		color: #635869; /*dark purple*/
+		font-family: "Quicksand", "Arial";
+        font-size: 0.8em;
+		padding-left: 0.1em;
+		font-weight: bold;
+      }	
+
+	  div.p-goal {
+		color: #635869; /*dark purple*/
+		font-family: "Quicksand", "Arial";
+        font-size: 0.9em;
+		padding-left: 0.1em;
+		font-weight: bold;
+		padding-right:1.0em;
+      }	
+	  
+	  div.p-qual {
+		color: #635869; /*dark purple*/
+		font-family: "Quicksand", "Arial";
+        font-size: 0.8em;
+		padding-left: 0.1em;
+		font-weight: normal;
+      }	
+	  
+		
+	div.p-terms {
+		padding-inline-start: 1em;
+		color: #635869; /*dark purple*/
+		font-family: "Quicksand", "Arial";
+        font-size: 0.8em;
+	}
+
+	  div.p-type {
+		color: #635869; /*dark purple*/
+		font-family: "Quicksand", "Arial";
+        font-size: 1.0em;
+		padding-left: 0.1em;
+		font-weight: bold;
+      }
+	  
+	  div.p-validity {
+		color: #635869; /*dark purple*/
+		font-family: "Quicksand", "Arial";
+        font-size: 1.0em;
+		padding-left: 0.1em;
+	  }
+	  	  
+      div.p-price {
+		color: #635869; /*dark purple*/
+		font-family: "Quicksand", "Arial";
+        font-size: 1.0em;
+		padding-left: 0.1em;
+      }
+
+
+		
+/*	 div.pad-adj:nth-child(1) {
+		padding-right: 0.1em;
+		}
+	 div.pad-adj:nth-child(3) {
+		padding-left: 0.1em;
+		}*/
+
+	
+	 .panel-title a {
+		color:#635869;
+		font-family: "Quicksand", "Arial";
+		font-size: 0.8em;
+			font-weight: bold;			
+			}  
+
+	
+	select {
+		color: #635869; /*dark purple*/
+		font-family: "Quicksand", "Arial";
+        font-size: 1.0em;
+		background-color: #f8f9fa;
+	}
+		
+	.btn-buy {
+		background-color: #635869;
+		border-color: #635869;
+		padding: 0.1rem 0.5rem;
+		vertical-align: baseline;
+		font-size: 0.9rem;
+	}
+	
+	h4.InstructorName {
+		color:white;
+		font-weight: lighter;
+		font-family: "Montserrat", "Arial";
+		margin-bottom:0;
+		margin-top:0.25em;
+		letter-spacing: 0.3em;
+		font-size: 1.4rem;
+	}
+	
+	h4.PTtitle {
+		color:#66cccc;
+		font-family: "Montserrat", "Arial";
+		margin-bottom:0.1em;
+		letter-spacing: 0.125em;
+	}
+	
+	.modal-content h5 {
+		font-size: 1.0rem;
+	}
+	 
+	
+.SocMedFoot li a {
+	color: black;
+}

@@ -1,0 +1,256 @@
+html,body,div,ul,li,h1,h2,h3,h4,h5,h6,p,th,td , { 
+    margin:0;
+    padding:0;
+    font-family: "Quicksand", "Arial";
+ }
+
+  * {
+    box-sizing: border-box;
+}
+
+h4 {
+   margin-top:0.5em;
+   color: #635869; /*dark purple*/
+   font-family: "Quicksand", "Arial";
+   margin-bottom: 1em;
+    }
+   
+ /*alternative h4 for heavy text pages e.g. Attend.html*/  
+.Alth4 {
+   font-style: italic;
+   font-weight: bold;
+   margin-bottom: 0;
+   }
+   
+   /*for hr used to underline titles as opposed to section breaks on whatson page*/
+.TitleUnderline{
+   margin-top: 0.1rem;
+   margin-bottom: 1rem;
+   color: #635869; /*dark purple*/
+   border-top: 3px solid #635869;
+}
+   
+h5 {
+   color: #707070;
+   font-family: "Quicksand", "Arial";
+   font-weight: bold;
+  }
+ 
+h6 {
+   font-family: "Quicksand", "Arial";
+    }
+	 
+/*p {
+   font-size: 1em;
+   color: #707070;
+   font-family: "Quicksand", "Arial";
+   text-align:justify;  
+   text-justify:auto;
+ }*/
+ 
+ .GeneralText {
+  /* font-size: 1em;*/
+   font-size: 0.75em;
+   color: #707070;
+   font-family: "Quicksand", "Arial";
+   text-align:justify;
+   text-justify:auto;
+ }
+ 
+ @media (min-width: 768px) {
+	.GeneralText {
+    font-size: 0.9em;
+	}
+ }
+ 
+ .ClassTickTable {
+   background-color: #dddddd;
+   border-spacing: 0;
+   border-top-right-radius: 0.6em;
+   border-top-left-radius: 0.6em;
+   font-size: 0.8em;
+   color: #707070;
+   font-family: "Quicksand", "Arial";
+   margin-bottom:1.5em;
+ }
+ 
+ @media (min-width: 768px) {
+	.ClassTickTable {
+    font-size: 1em;
+	}
+ }
+ 
+ .ClassTickTable td {
+	border: white solid 0.06em;
+   padding: 0 0.4vw 0 0.4vw;
+    font-weight: bold;
+ }
+
+ .ClassTickTable th { 
+   border: white solid 0.06em;
+   text-align: left;
+   padding: 0 0.4vw 0 0.4vw;
+  /* font-weight: bold;*/
+   color: #707070;
+   font-size: 0.9em;
+ }
+ 
+ .ClassPhoto {
+  display: block;
+  max-width:95%;
+  }
+  
+  .ScheduleTable {
+   background-color: #dddddd;
+   border-spacing: 0;
+   border-top-right-radius: 0.6em;
+   border-top-left-radius: 0.6em;
+   font-size: 0.8em;
+   color: #707070;
+   font-family: "Quicksand", "Arial";
+   }
+   
+   @media (min-width: 992px) {
+	.ScheduleTable {
+    font-size: 1em;
+	}
+ }
+   
+ /*changed padding-right from 0.8 to 0.4 Feb 2019 which corrected odd formatting on medium screen. Not sure why it was originally at 0.8*/
+  td {
+   border: white solid 0.06em;
+   padding: 0.4em 0.4em 0.4em 0.4em;
+ }
+ 
+ .longtd {
+   border: white solid 0.06em;
+   padding: 0.4em 0.4em 0.4em 0.4em;
+ }
+ 
+ th {
+   border: white solid 0.06em;
+   text-align: left;
+   padding: 0.4em 0.8em 0.4em 0.4em;
+   font-weight: bold;
+   color: black
+ }
+ 
+
+ .Trademark {
+   font-size:65%;
+   vertical-align:top;
+ }
+   
+ .SocMedFoot {
+  display:block;  /*changed this from inline-block, otherwise got shifted relative to the gallery div on the gallery page */
+  background-color: white;
+  list-style: none;
+  margin-top:1em;
+  text-align:center;
+  margin-right:0;
+  margin-left:0;
+  padding-left:0;
+  padding-right:0;
+ }
+ 
+ .SocMedFoot li{
+  display: inline-block;
+  padding: 0 0.3em 0.5em 0;
+   }
+  
+  hr{
+    border-width: 3px;
+}
+
+.StudioSlides {
+   display: none;
+   max-width:95%;
+   margin: 0 0 0 0;
+ }
+ 
+   
+/*START: section relates to TERMS where navigation bar not wanted but logo wanted*/
+  
+ .SpaceLogo {
+ display: block;
+ max-width:100%;
+ margin:auto;
+ /*new for superimpose*/
+ position:relative;
+ }
+  
+ /*END: section relates to TERMS*/
+ 
+ /*START: section relates to Space Logo in navbar*/
+.Logonavbar {
+width:150px;
+}
+
+@media (min-width: 576px) {
+	.Logonavbar {
+	width:170px;
+	}
+}
+	
+ 
+ /*remove padding from logo in navbar so it fits tightly*/
+.navbar-brand {
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+/*remove padding from navbar so logo fits tightly*/
+.navbar {
+  padding: 0 1rem;
+}
+
+/*for Text Links - uses bootstrap colours for hover etc...*/
+.btn-generaltext {
+  white-space: normal;
+  line-height: 1.25;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size:0.9em;
+  border-radius: 0.25rem;
+  background-color: white;
+  color:#635869;
+  border-color: #635869;
+}
+
+.btn {
+    vertical-align: baseline;
+	}
+
+.ScheduleTable td{
+ vertical-align:top;
+   }
+   
+/*START: section relates to class comparison tables*/
+
+ /*.AllClassBenefitsTable {
+   background-color: #dddddd;
+   border-spacing: 0;
+   border-top-right-radius: 0.6em;
+   border-top-left-radius: 0.6em;
+   font-size: 0.8em;
+   color: #707070;
+   font-family: "Quicksand", "Arial";
+   margin: auto;
+   margin-top:1em;
+ }
+ 
+ .AllClassBenefitsTable td {
+	padding: 0.4em 0.8vw 0.4em 0.4vw;
+    }
+
+ .AllClassBenefitsTable th { 
+ 	padding: 0.4em 0.8em 0.4em 0.4em;
+ }
+ */
+ 
+ .DropDownCat {
+	padding-left: 0.5rem;
+    font-style: italic;
+    background-color:#dddddd;
+ }
+	 
+

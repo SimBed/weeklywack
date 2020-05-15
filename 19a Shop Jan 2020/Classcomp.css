@@ -1,0 +1,158 @@
+/*.AllClassBenefitsTable {
+   background-color: #dddddd;
+   border-spacing: 0;
+   border-top-right-radius: 0.6em;
+   border-top-left-radius: 0.6em;
+   font-size: 0.8em;
+   color: #707070;
+   font-family: "Quicksand", "Arial";
+   margin: auto;
+   margin-top:1em;
+ }
+ 
+ .AllClassBenefitsTable td {
+	padding: 0.4em 0.8vw 0.4em 0.4vw;
+    }
+
+ .AllClassBenefitsTable th { 
+ 	padding: 0.4em 0.8em 0.4em 0.4em;
+ }
+ */
+
+
+
+.AllClassBenefitsTable {
+   background-color: #dddddd;
+   border-spacing: 0;
+   border-top-right-radius: 0.6em;
+   border-top-left-radius: 0.6em;
+   font-size: 0.8em;
+   color: #707070;
+   font-weight:bold;
+   font-family: "Quicksand", "Arial";
+   margin: auto;
+   margin-top;
+  /* margin-left:0;
+   margin-top:-0.5em;
+   margin-bottom:2.5em;*/
+   /*text-align:center;*/
+  /* width:100%;*/
+  }
+  
+/*   @media (max-width: 768px) {
+	.AllClassBenefitsTable {
+    font-size: 0.6em;
+	  /* width:100%;*/
+	}
+ }*/
+    
+ .AllClassBenefitsTable tr:hover {background-color: white}
+ 
+ .AllClassBenefitsTable td {
+	/* width:12.5%;*/
+ }
+ 
+ 
+   @media (max-width: 992px) {
+  .container {
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+}
+
+ @media (max-width: 768px) {
+  .AllClassBenefitsTable td , .AllClassBenefitsTable th{
+    padding-right: 0;
+    padding-left: 0;
+	 font-size: 0.7em;
+  }
+  .btn {
+  
+	    padding: .1rem .1rem;
+}
+}
+
+
+ .Unimportant  {
+	 display:none;
+  }
+  
+  @media (min-width: 576px) {
+	.Unimportant  {
+	display:none;
+	}
+  }
+
+  @media (min-width: 768px) {
+	.Unimportant  {
+	display:none;
+	}
+  }
+
+  @media (min-width: 992px) {
+	.Unimportant  {
+	display:inline;
+	}
+  }
+
+  @media (min-width: 1200px) {
+	.Unimportant  {
+	display:inline;
+	}
+  }
+  
+ 
+.Circle {
+  display:inline-block;
+  border-radius: 50%;
+  width:0.7em;
+  height:0.7em;
+ }
+ 
+ .Green {
+	background-color: #18b413;
+	color: #dddddd;
+ }
+ 
+ .Blue {
+	background-color: #4fc2d6;
+	color: #dddddd;
+   }
+   
+ .Darkkhaki {
+	background-color: #BDB76B;
+	color: #dddddd;
+ }
+ 
+ .Pink {
+	background-color: #ff00ff;
+	color: #dddddd;
+ }
+ 
+ .Magenta {
+	background-color: 	#8B008B;
+	color: #dddddd;
+ }
+   
+  .White {
+	background-color: #fff;
+	border: 1px solid  black;
+    color: #dddddd;
+	border-radius: 0;
+   }
+   
+caption {  
+    caption-side: top;
+	font-size: 1.5rem;
+	margin-top:0.5em;
+	padding-top: 0;
+    padding-bottom: 0;
+    color: #707070;
+}
+
+.btn {
+    vertical-align: baseline;
+	font-weight: 800;
+	}
+ 
+	 

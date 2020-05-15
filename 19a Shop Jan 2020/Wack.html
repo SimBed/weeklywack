@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <script src="https://use.fontawesome.com/66447c9e4c.js"></script>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content= "Shopping Cart">
+	
+   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">  
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand">
+  <link rel="stylesheet" type="text/css" href="General.css?v=2">
+  <link rel="stylesheet" type="text/css" href="PT.css?v=4">
+    <link rel="stylesheet" type="text/css" href="Modal.css?v=2">
+  
+  <title>Private Training | HIIT | Yoga | Pilates | Gym | Weight Loss | Strength | Personal Training | The Space Juhu</title>
+  
+    <script>
+
+    function updateChoice() {
+	/*document.getElementById("test").innerText = "Hi";*/
+		var userSelection = document.getElementById("ClassDD").value;
+		var elements = document.getElementsByClassName("WorkoutGroup");
+			
+		n = elements.length;
+		
+			for (var i = 0; i < n; i++) {
+				var e = elements[i];
+				if(e.classList.contains(userSelection) || userSelection == "All" ) {
+					e.style.display = 'block';
+				} else {
+					e.style.display = 'none';
+				}
+			}
+ 		}
+	
+  </script>
+  
+ 
+
+</head>
+
+<body>
+     <div id="p-flex">
+
+		<div class="p-flex"><div class="p-flex-in">
+		  <div class="container">
+				  <div class="row p-1 bg-light">
+					<div class ="col-6">
+					<div class="p-product">product1</div>
+					<div class="p-product">Rs. 2,200</div>
+				  </div>
+				  	<div class ="col-6">
+	 <iframe src="https://www.youtube.com/embed/SNNKQlkoPqQ">
+</iframe>
+				  </div>
+			  </div>
+			  	  </div>
+				  	  </div>
+			  </div>
+			  	  </div>
+
+	
+	<div class="WorkoutGroup Fat Strength Stamina">
+	
+      <div id="p-flex">
+
+		<div class="p-flex"><div class="p-flex-in">
+			<div class="imgcontainer">
+				<img id="Son" class="p-img" src="Images/PT/Sonal.jpg?v=1" alt="Sonal in Action"/>
+			</div>
+			<div class = "text-center mb-1 mt-1"><p class = "p-tagline">"I'll listen to your goals and customise exercises to help you crush them!"</p></div>
+			<div class = "bg-dark text-center ml-2 mr-2 mb-0"><h4 class ="InstructorName">SONAL MEHTA</h4></div>
+			<div class = "container px-1">
+			
+			  <div class="d-flex p-1 bg-light justify-content-center">
+				<div class="p-goal">Fat-burn</div>
+				<div class="p-goal">Strength Gain</div>
+				<div class="p-goal">Stamina</div>
+			  </div>
+
+			  <div class="container">
+				  <div class="row p-1 bg-light">
+					<div class="col-6 p-product">1 Session</div>
+					<div class="col-6 p-product">Rs. 2,200</div>
+				  </div>
+			  </div>
+			  
+			  <div class="container">
+				  <div class="row p-1 bg-light mb-1">
+					<div class="col-6 p-product">Packages from</div>
+					<div class="col-6 p-product">Rs. 2,000 per Session</div>
+				  </div>
+			  </div>
+			  
+			  <div class="bg-light">
+				<div class="mr-auto p-qual"><i class="fa fa-instagram" aria-hidden="true"></i> @that_step_girl</div>
+			  </div>
+   		  
+			</div>
+		
+		</div>
+		</div>
+	  
+	</div>
+  </div>
+   
+<script>
+
+var show_modal = function()
+{
+var modal = document.getElementById("Modal_"+this.id);
+modal.style.display = "block";
+ 
+}
+var unshow_modal = function()
+{
+var modal = document.getElementById("Modal_"+this.id.substring(6, 9));
+modal.style.display = "none";
+}
+document.getElementById("Son").onclick = show_modal;
+document.getElementById("Close_Son").onclick = unshow_modal;
+document.getElementById("Modal_Son").onclick = unshow_modal;
+
+document.getElementById("Apo").onclick = show_modal;
+document.getElementById("Close_Apo").onclick = unshow_modal;
+document.getElementById("Modal_Apo").onclick = unshow_modal;
+
+</script>
+
+	<div class="container">
+		<ul class="SocMedFoot mb-0">
+			<li> <a href="https://www.instagram.com/thespace.juhu/" target="_blank">
+					<i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+			</a></li>
+			<li> <a href="https://www.facebook.com/TheSpace.Mumbai/timeline" target="_blank">
+					<i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i>
+			</a></li>
+			<li> <a href="https://wa.me/919619348427" target="_blank"> <i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i></a></li>
+	    </ul>
+		
+
+		<p  class="GeneralText text-right">
+			The Space, A.B. Nair Rd, Juhu<br>
+			(Next to Bayroute, Opp. Chin Chin Chu)<br>
+			Mumbai, Maharashtra 400049
+		</p>
+	 
+	</div>
+	
+<script>
+var length = document.getElementsByClassName('Term1').length;
+for(var i=0; i< length; i++) {
+  document.getElementsByClassName('Term1')[i].innerHTML = "This booking will not be refunded or exchanged, so please ensure you have read our <a class ='btn btn-info btn-generaltext' href='Policy.html'>Product Policy</a> and understand the product before completing your purchase.";
+}
+ var length = document.getElementsByClassName('Term2').length;
+for(var i=0; i< length; i++) {
+  document.getElementsByClassName('Term2')[i].innerHTML = "Please read here before arrival <a class ='btn btn-info btn-generaltext' href='Attend.html'>Attend a Class</a> so you are prepared for your first class."; 
+  }
+</script>
+
+</body>
+</html>
+

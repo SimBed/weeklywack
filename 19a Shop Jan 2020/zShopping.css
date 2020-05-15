@@ -1,0 +1,133 @@
+/* for accordion triangle*/
+	.panel-heading a:first-child:after {
+	  border: solid #635869;
+	  border-width: 0 0.1em 0.1em 0;
+	  display: inline-block;
+	  padding: 0.13em;
+	   transform: rotate(45deg);
+	   content:""
+	} 
+
+ /* Flex container */
+      #p-flex {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      div.p-flex {
+        width: 100%;
+      }
+	  
+      @media only screen and (min-width: 540px) {
+        div.p-flex { width: 50%; }
+      }
+      @media only screen and (min-width: 810px) {
+        div.p-flex { width: 33%; }
+      }
+     @media only screen and (min-width: 1100px) {
+        div.p-flex { width: 25%; }
+      }	  
+
+      div.p-flex-in {
+        box-sizing: border-box;
+        margin: 5px; 
+        padding: 10px;
+        border: 1px solid #e7fcde;
+        background: #f6fff2;
+		position: relative;
+      }
+	  
+	  div.imgcontainer {
+		  	position: relative;
+		  
+	  }
+      img.p-img {
+        width: 100%;
+        height: auto;
+      }
+	  
+      div.p-name {
+		color: #635869; /*dark purple*/
+		font-family: "Quicksand", "Arial";
+        font-weight: bold;
+        font-size: 1.1em;
+
+      }
+	  
+	  div.p-desc {
+		color: #635869; /*dark purple*/
+		font-family: "Quicksand", "Arial";
+        font-size: 0.8em;
+      }
+
+	  div.p-type {
+		font-family: "Quicksand", "Arial";
+        font-size: 1.0em;
+				position:absolute;
+ top: 0;
+  left: 0;
+  background-color:#635869;
+  color:#fff;
+  padding: .2em .5em;
+    border-radius: .25em;
+      }
+	  
+	  div.p-classes {
+		font-family: "Quicksand", "Arial";
+        font-size: 0.9em;
+				position:absolute;
+
+		bottom: 0;
+		left: -10px;
+		background-color:#635869;
+		color:#fff;
+		padding: .2em .5em;
+		border-radius: .25em;
+      }
+	  
+div.p-validity {
+		font-family: "Quicksand", "Arial";
+        font-size: 0.9em;
+				position:absolute;
+		bottom: 0;
+		right: -10px;
+		background-color:#635869;
+		color:#fff;
+		padding: .2em .5em;
+		border-radius: .25em;
+}
+	  	  
+      div.p-price {
+		color: #635869; /*dark purple*/
+		font-family: "Quicksand", "Arial";
+        font-size: 1.0em;
+      }
+ 
+		.panel-title a {
+			color:#635869;
+			font-size: 1.0em;
+		}  
+		
+	.p-terms {	
+		padding-inline-start: 1em;
+		color: #635869; /*dark purple*/
+		font-family: "Quicksand", "Arial";
+        font-size: 0.8em;
+	}
+	
+	select {
+		color: #635869; /*dark purple*/
+		font-family: "Quicksand", "Arial";
+        font-size: 1.0em;
+		background-color: #f8f9fa;
+	}
+		
+	.btn-info {
+		background-color: #635869;
+		border-color: #635869;
+	}
+			
+			

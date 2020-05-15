@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138142888-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-138142888-1');
+</script>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content= "Shopping Cart">
+	
+  <meta property="og:title" content="Buy Now">
+  <meta property="og:description" content=" ">
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://thespacejuhu.in/Images/OpenGraph/GeneralOG.png">
+  <meta property="og:image:secure_url" content="https://thespacejuhu.in/Images/OpenGraph/GeneralOG.png">
+  <meta property="og:url" content="https://thespacejuhu.in/Home.html">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">  
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Quicksand">
+  <link rel="stylesheet" type="text/css" href="General.css?v=2">
+  <link rel="stylesheet" type="text/css" href="Shop.css?v=2">
+    <link rel="stylesheet" type="text/css" href="Modal.css?v=2">
+  
+  <title>Buy Now | The Space Juhu</title>
+  
+    <script>
+
+    function updateChoice() {
+	/*document.getElementById("test").innerText = "Hi";*/
+		var userSelection = document.getElementById("ClassDD").value;
+		var elements = document.getElementsByClassName("WorkoutGroup");
+			
+		n = elements.length;
+		
+			for (var i = 0; i < n; i++) {
+				var e = elements[i];
+				if(e.classList.contains(userSelection) || userSelection == "All" ) {
+					e.style.display = 'block';
+				} else {
+					e.style.display = 'none';
+				}
+			}
+ 		}
+	
+  </script>
+  
+ 
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-md navbar-light bg-light" data-toggle="affix">
+		<div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
+			<a class="navbar-brand" href="Home.html">
+			<img class="Logonavbar" src="Images/Other/SpaceLogo.png" alt="logo">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#SpaceNavBar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+			</button>
+  
+			<div class="collapse navbar-collapse text-center" id="SpaceNavBar">
+				<ul class="navbar-nav">
+ 					<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">THE STUDIO</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="Home.html">Home</a>
+							<a class="dropdown-item" href="Attend.html">Attend a Class</a>
+							<a class="dropdown-item" href="Rent.html">Rent The Space</a>
+							<a class="dropdown-item" href="Studios.html">Our Studios</a>
+						</div>
+					</li>
+	
+					<li class="nav-item">
+					<a class="nav-link" href="Timetable.html">TIMETABLE</a>
+					</li>
+	
+					<li class="nav-item dropdown active">
+					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">CLASSES</a>
+					<div class="dropdown-menu">
+<div class="DropDownCat">FITNESS & SKILL</div>
+<a class="dropdown-item active" href="Aerial.html">Aerial Movement</a>
+<a class="dropdown-item" href="Aerofunc.html">AeroFunc</a>
+<a class="dropdown-item" href="Bodyq.html">Body Quest</a>
+<a class="dropdown-item" href="Crossfitness.html">Cross Fitness - Elements</a>
+<a class="dropdown-item" href="Pilatesflow.html">Pilates Flow</a>
+<a class="dropdown-item" href="Pilatesfusion.html">Pilates Fusion</a>
+<a class="dropdown-item" href="Pole.html">Pole Fitness</a>
+<a class="dropdown-item" href="Movement.html">The Movement</a>
+<div class="DropDownCat">YOGA & MOVEMENT</div>
+<a class="dropdown-item" href="Ashtanga.html">Ashtanga Yoga</a>
+<a class="dropdown-item" href="Express.html">Express Yoga</a>
+<a class="dropdown-item" href="Iyengar.html">Iyengar Inspired Yoga</a>
+<a class="dropdown-item" href="Yin.html">Yin Yoga</a>
+<a class="dropdown-item" href="Yogaflow.html">Yoga Flow</a>
+<a class="dropdown-item" href="Yogaindi.html">Yoga Indi</a>
+<div class="DropDownCat">DANCE FITNESS</div>
+<a class="dropdown-item" href="Danceacize.html">Dance-A-Cize</a>
+<a class="dropdown-item" href="Zumba.html">Zumba<span class="Trademark">&reg;</span> with Priti</a>
+<div class="DropDownCat">MOM & KIDS</div>
+<a class="dropdown-item" href="Musictog.html">Music Together</a>
+<a class="dropdown-item" href="Preballet.html">Pre Ballet</a>
+<a class="dropdown-item" href="Prenatal.html">Prenatal Fitness</a>
+<a class="dropdown-item" href="Singsong.html">Sing Song Sign</a>
+<a class="dropdown-item" href="Taekwondo.html">Taekwondo</a>
+					</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="Whatson.html">WHAT'S ON</a>
+					</li>
+					<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">MEMBERSHIP</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="Flexi.html">Flexi Package</a>
+						<a class="dropdown-item active" href="Shop.html">Shop</a>
+						<a class="dropdown-item" href="Policy.html">Package Policy</a>
+					</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="Contact.html">CONTACT</a>
+					</li>
+	
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="text-center container my-3">
+	  <select id="ClassDD" onchange="updateChoice()">
+		<option value="All">Select Workout Type</option>
+		<option value="All">Show All</option>
+		<option value="HIIT">Functional, HIIT, CrossFitness</option>
+		<option value="Cardio">Cardio & Core</option>
+		<option value="Yoga">Yoga</option>
+		<option value="Flexi">Flexi Packages</option>
+	  </select>
+	</div>
+
+	<div id ="Flexi" class="WorkoutGroup Flexi mt-4">
+	  <div class = "bg-dark text-center ml-2 mr-2 mt-2 mb-0"><h3 class ="banner">THE SPACE FLEXI PACKAGE</h3></div>
+	
+      <div id="p-flex" class= "Flexi">
+
+		<div class="p-flex"><div class="p-flex-in">
+			<div class="imgcontainer">
+				<img id="Flx" class="p-img" src="Images/Shop/Flexi.jpg?v=1" alt="Multiple Class Photo"/>
+			</div>
+			<div class = "container px-1">
+			
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">1 Week UNLIMITED Trial</div>
+					<div class="p-product mr-2">Rs. 1,800 </div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/37No4xv" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">1 Week UNLIMITED</div>
+					<div class="p-product mr-2">Rs. 2,400</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/32OU6rI" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+			  
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">1 Month UNLIMITED</div>
+					<div class="p-product mr-2">Rs. 8,000</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/35tLOFm" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+			  
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">3 Month UNLIMITED</div>
+					<div class="p-product mr-2">Rs. 22,500</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/32J101l " target="_blank">Buy</a></div>
+				</div>
+			  </div>
+
+			</div>
+
+			<div class="container pl-0">
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						<div class="panel-title mb-1 text-center">
+								<a data-toggle="collapse" data-parent="#accordion" href="#Terms-Flx">Terms Apply   <i class="arrow down"></i></a>
+						</div>
+						</div>
+						<div id="Terms-Flx" class="panel-collapse collapse in">
+							<div class="panel-body p-terms">
+								<ul>
+									<li class="Term1">[Term1]</li>
+									<li class="Term2">[Term2]</li>
+								</ul>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+		
+			<div id="Modal_Flx" class="modal">
+			<div class="modal-content">
+				<span id="Close_Flx" class="close">&times;</span>
+				<p class="GeneralText">
+					Get Flexi!
+				</p>
+			</div>
+			</div>
+		
+		</div>
+		</div>
+	  
+	</div>
+  </div>
+   
+	<div class="WorkoutGroup HIIT">
+	  <div class = "bg-dark text-center ml-2 mr-2 mt-2 mb-0 py-1"><h3 class ="banner">FUNCTIONAL, HIIT, CROSSFITNESS</h3></div>
+	
+      <div id="p-flex" class= "HIIT">
+
+		<div class="p-flex"><div class="p-flex-in">
+			<div class="imgcontainer">
+				<img id="Mov" class="p-img" src="Images/Shop/Movement.jpg?v=1" alt="Class shot of The Movement"/>
+			</div>
+			<div class = "container px-1">
+			
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">UNLIMITED - 1 Week Trial</div>
+					<div class="p-product mr-2">Rs. 1,200 </div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/2VEIrKw" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">1 Class</div>
+					<div class="p-product mr-2">Rs. 950</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/2PE7NEc" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+			  
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">12 Class - 1 Month</div>
+					<div class="p-product mr-2">Rs. 7,200</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/2wjfo4z" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+			  
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">UNLIMITED - 3 Month</div>
+					<div class="p-product mr-2">Rs. 21,000</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/3cHg8B9" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+
+			  <div class="d-flex flex-column mb-1">
+
+			  <div class="p-product goto_flexi">
+				<a class ="btn btn-info btn-buy w-100" href="Shop.html#Flexi">or <strong>GO FLEXI</strong> <small>(from Rs. 1,800)</small></a>
+			  </div>
+	
+			  </div>			  			  
+
+			</div>
+
+			<div class="container pl-0">
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						<div class="panel-title mb-1 text-center">
+								<a data-toggle="collapse" data-parent="#accordion" href="#Terms-Mov">Terms Apply   <i class="arrow down"></i></a>
+						</div>
+						</div>
+						<div id="Terms-Mov" class="panel-collapse collapse in">
+							<div class="panel-body p-terms">
+								<ul>
+									<li class="Term1">[Term1]</li>
+									<li class="Term2">[Term2]</li>
+								</ul>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+		
+			<div id="Modal_Mov" class="modal">
+			<div class="modal-content">
+				<span id="Close_Mov" class="close">&times;</span>
+				<p class="GeneralText">
+					Kunal will track your every kettlebell swing and calorie burned
+				</p>
+			</div>
+			</div>
+		
+		</div>
+		</div>
+	  
+		<div class="p-flex"><div class="p-flex-in">
+			<div class="imgcontainer">
+				<img id="Cro" class="p-img" src="Images/Shop/Crossfitness.jpg?v=1" alt="Class shot of CrossFitness"/>
+			</div>
+			<div class = "container px-1">
+			
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">UNLIMITED - 1 Week Trial</div>
+					<div class="p-product mr-2">Rs. 1,200 </div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/2Tzel8e" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">1 Class</div>
+					<div class="p-product mr-2">Rs. 950</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/32PbMmT" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+			  
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">12 Class - 1 Month</div>
+					<div class="p-product mr-2">Rs. 7,200</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/2TeQs76" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+			  
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">UNLIMITED - 3 Month</div>
+					<div class="p-product mr-2">Rs. 21,000</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/2TNXLBT" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+
+			  <div class="p-product goto_flexi">
+				<a class ="btn btn-info btn-buy w-100" href="Shop.html#Flexi">or <strong>GO FLEXI</strong> <small>(from Rs. 1,800)</small></a>
+			  </div>			  
+
+			</div>
+			
+			<div class="container pl-0">
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						<div class="panel-title mb-1 text-center">
+								<a data-toggle="collapse" data-parent="#accordion" href="#Terms-Cro">Terms Apply   <i class="arrow down"></i></a>
+						</div>
+						</div>
+						<div id="Terms-Cro" class="panel-collapse collapse in">
+							<div class="panel-body p-terms">
+								<ul>
+									<li class="Term1">[Term1]</li>
+									<li class="Term2">[Term2]</li>
+								</ul>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+		
+			<div id="Modal_Cro" class="modal">
+			<div class="modal-content">
+				<span id="Close_Cro" class="close">&times;</span>
+				<p class="GeneralText">
+					Dead lift, clean, landmine, press
+				</p>
+			</div>
+			</div>
+		
+		</div>
+		</div>
+
+	</div>
+  </div>
+
+	<div class="WorkoutGroup Cardio mt-4">
+	  <div class = "bg-dark text-center ml-2 mr-2 mt-2 mb-0 py-1"><h3 class ="banner">CARDIO & CORE</h3></div>
+	
+      <div id="p-flex">
+
+		<div class="p-flex"><div class="p-flex-in">
+			<div class="imgcontainer">
+				<img id="Aer" class="p-img" src="Images/Shop/Aerofunc.jpg?v=1" alt="Class shot of AeroFunc"/>
+			</div>
+			<div class = "container px-1">
+			
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">1 Class</div>
+					<div class="p-product mr-2">Rs. 650</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/32KvEYm" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+			  
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">8 Class - 1 Month</div>
+					<div class="p-product mr-2">Rs. 3,500</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/2VFVdbl" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+			  
+			  <div class="d-flex flex-column mb-1">
+
+			  <div class="p-product goto_flexi">
+				<a class ="btn btn-info btn-buy w-100" href="Shop.html#Flexi">or <strong>GO FLEXI</strong> <small>(from Rs. 1,800)</small></a>
+			  </div>
+	
+			  </div>			  			  
+
+			</div>
+
+			<div class="container pl-0">
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						<div class="panel-title mb-1 text-center">
+								<a data-toggle="collapse" data-parent="#accordion" href="#Terms-Aer">Terms Apply   <i class="arrow down"></i></a>
+						</div>
+						</div>
+						<div id="Terms-Aer" class="panel-collapse collapse in">
+							<div class="panel-body p-terms">
+								<ul>
+									<li class="Term1">[Term1]</li>
+									<li class="Term2">[Term2]</li>
+								</ul>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+			
+			<div id="Modal_Aer" class="modal">
+			<div class="modal-content">
+				<span id="Close_Aer" class="close">&times;</span>
+				<p class="GeneralText">
+					Sonal will...
+				</p>
+			</div>
+			</div>		
+		
+		</div>
+		</div>
+	  
+		<div class="p-flex"><div class="p-flex-in">
+			<div class="imgcontainer">
+				<img id="Pil" class="p-img" src="Images/Shop/Pilates.jpg?v=1" alt="Class shot of Pilates"/>
+			</div>
+			<div class = "container px-1">
+			
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">UNLIMITED - 1 Week Trial</div>
+					<div class="p-product mr-2">Rs. 1,000 </div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/2VFKnCy" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">1 Class</div>
+					<div class="p-product mr-2">Rs. 850</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/38mwjAB" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+			  
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">12 Class - 1 Month</div>
+					<div class="p-product mr-2">Rs. 7,000</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/3cp2eDo" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+			  
+			  <div class="d-flex flex-column mb-1">
+
+			  <div class="p-product goto_flexi">
+				<a class ="btn btn-info btn-buy w-100" href="Shop.html#Flexi">or <strong>GO FLEXI</strong> <small>(from Rs. 1,800)</small></a>
+			  </div>
+	
+			  </div>			  			  
+
+			</div>
+			
+			<div class="container pl-0">
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						<div class="panel-title mb-1 text-center">
+								<a data-toggle="collapse" data-parent="#accordion" href="#Terms-Pil">Terms Apply   <i class="arrow down"></i></a>
+						</div>
+						</div>
+						<div id="Terms-Pil" class="panel-collapse collapse in">
+							<div class="panel-body p-terms">
+								<ul>
+									<li class="Term1">[Term1]</li>
+									<li class="Term2">[Term2]</li>
+								</ul>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+		
+			<div id="Modal_Pil" class="modal">
+			<div class="modal-content">
+				<span id="Close_Pil" class="close">&times;</span>
+				<p class="GeneralText">
+					Brishti will...
+				</p>
+			</div>
+			</div>		
+		
+		</div>
+		</div>
+		
+	</div>
+  </div>
+  
+	<div class="WorkoutGroup Yoga mt-4">
+	  <div class = "bg-dark text-center ml-2 mr-2 mt-2 mb-0 py-1"><h3 class ="banner">YOGA</h3></div>
+	
+      <div id="p-flex">
+
+		<div class="p-flex"><div class="p-flex-in">
+			<div class="imgcontainer">
+				<img id="Exp" class="p-img" src="Images/Shop/Express.jpg?v=1" alt="Class shot of Express Yoga"/>
+			</div>
+			<div class = "container px-1">
+			
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">1 Class</div>
+					<div class="p-product mr-2">Rs. 800</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/2IfheGh" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+			  
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">8 Class - 1 Month</div>
+					<div class="p-product mr-2">Rs. 4,400</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/2uMHxAx" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+			  
+			  <div class="d-flex flex-column mb-1">
+
+			  <div class="p-product goto_flexi">
+				<a class ="btn btn-info btn-buy w-100" href="Shop.html#Flexi">or <strong>GO FLEXI</strong> <small>(from Rs. 1,800)</small></a>
+			  </div>
+	
+			  </div>			  			  
+
+			</div>
+
+			<div class="container pl-0">
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						<div class="panel-title mb-1 text-center">
+								<a data-toggle="collapse" data-parent="#accordion" href="#Terms-Exp">Terms Apply   <i class="arrow down"></i></a>
+						</div>
+						</div>
+						<div id="Terms-Exp" class="panel-collapse collapse in">
+							<div class="panel-body p-terms">
+								<ul>
+									<li class="Term1">[Term1]</li>
+									<li class="Term2">[Term2]</li>
+								</ul>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+		
+			<div id="Modal_Exp" class="modal">
+			<div class="modal-content">
+				<span id="Close_Exp" class="close">&times;</span>
+				<p class="GeneralText">
+					Radhika will...
+				</p>
+			</div>
+			</div>		
+		
+		</div>
+		</div>
+	  
+		<div class="p-flex"><div class="p-flex-in">
+			<div class="imgcontainer">
+				<img id="Iye" class="p-img" src="Images/Shop/Iyengar.jpg?v=1" alt="Class shot of Iyengar"/>
+			</div>
+			<div class = "container px-1">
+			
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">1 Class</div>
+					<div class="p-product mr-2">Rs. 800</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/32GwLs6" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+			  
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">8 Class - 1 Month</div>
+					<div class="p-product mr-2">Rs. 4,400</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/3ajWUiN" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+
+			  <div class="d-flex flex-column mb-1">
+
+			  <div class="p-product goto_flexi">
+				<a class ="btn btn-info btn-buy w-100" href="Shop.html#Flexi">or <strong>GO FLEXI</strong> <small>(from Rs. 1,800)</small></a>
+			  </div>
+	
+			  </div>			  			  
+
+			</div>
+			
+			<div class="container pl-0">
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						<div class="panel-title mb-1 text-center">
+								<a data-toggle="collapse" data-parent="#accordion" href="#Terms-Iye">Terms Apply   <i class="arrow down"></i></a>
+						</div>
+						</div>
+						<div id="Terms-Iye" class="panel-collapse collapse in">
+							<div class="panel-body p-terms">
+								<ul>
+									<li class="Term1">[Term1]</li>
+									<li class="Term2">[Term2]</li>
+								</ul>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+		
+			<div id="Modal_Iye" class="modal">
+			<div class="modal-content">
+				<span id="Close_Iye" class="close">&times;</span>
+				<p class="GeneralText">
+					Radhika will.....
+				</p>
+			</div>
+			</div>		
+		
+		</div>
+		</div>
+
+		<div class="p-flex"><div class="p-flex-in">
+			<div class="imgcontainer">
+				<img id="Yin" class="p-img" src="Images/Shop/Yin.jpg?v=1" alt="Class shot of Yin"/>
+			</div>
+			<div class = "container px-1">
+			
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">1 Class</div>
+					<div class="p-product mr-2">Rs. 800</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/2TuXROF" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+			  
+			  <div class="d-flex flex-column mb-1">
+				<div class="d-flex p-1 bg-light">
+					<div class="mr-auto p-product">4 Class - 1 Month</div>
+					<div class="p-product mr-2">Rs. 2,200</div>
+					<div class="p-product"><a class ="btn btn-info btn-buy" href="http://bit.ly/39j98rX" target="_blank">Buy</a></div>
+				</div>
+			  </div>
+
+			  <div class="d-flex flex-column mb-1">
+
+			  <div class="p-product goto_flexi">
+				<a class ="btn btn-info btn-buy w-100" href="Shop.html#Flexi">or <strong>GO FLEXI</strong> <small>(from Rs. 1,800)</small></a>
+			  </div>
+	
+			  </div>			  			  
+
+			</div>
+			
+			<div class="container pl-0">
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						<div class="panel-title mb-1 text-center">
+								<a data-toggle="collapse" data-parent="#accordion" href="#Terms-Yin">Terms Apply   <i class="arrow down"></i></a>
+						</div>
+						</div>
+						<div id="Terms-Yin" class="panel-collapse collapse in">
+							<div class="panel-body p-terms">
+								<ul>
+									<li class="Term1">[Term1]</li>
+									<li class="Term2">[Term2]</li>
+								</ul>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+		
+			<div id="Modal_Yin" class="modal">
+			<div class="modal-content">
+				<span id="Close_Yin" class="close">&times;</span>
+				<p class="GeneralText">
+					Monika will...
+				</p>
+			</div>
+			</div>		
+		
+		</div>
+		</div>
+		
+	</div>
+  </div>
+  
+<script>
+var goto_flexi = function()
+{
+document.getElementById("Flexi").style.display = 'block';
+}
+
+var flexibuttons = document.getElementsByClassName("goto_flexi");
+n = flexibuttons.length;
+for (var i = 0; i < n; i++) {
+	flexibuttons[i].onclick = goto_flexi;
+	}
+
+
+var show_modal = function()
+{
+var modal = document.getElementById("Modal_"+this.id);
+modal.style.display = "block";
+ 
+}
+var unshow_modal = function()
+{
+var modal = document.getElementById("Modal_"+this.id.substring(6, 9));
+modal.style.display = "none";
+}
+document.getElementById("Mov").onclick = show_modal;
+document.getElementById("Close_Mov").onclick = unshow_modal;
+document.getElementById("Modal_Mov").onclick = unshow_modal;
+
+document.getElementById("Cro").onclick = show_modal;
+document.getElementById("Close_Cro").onclick = unshow_modal;
+document.getElementById("Modal_Cro").onclick = unshow_modal;
+
+document.getElementById("Aer").onclick = show_modal;
+document.getElementById("Close_Aer").onclick = unshow_modal;
+document.getElementById("Modal_Aer").onclick = unshow_modal;
+
+document.getElementById("Pil").onclick = show_modal;
+document.getElementById("Close_Pil").onclick = unshow_modal;
+document.getElementById("Modal_Pil").onclick = unshow_modal;
+
+document.getElementById("Exp").onclick = show_modal;
+document.getElementById("Close_Exp").onclick = unshow_modal;
+document.getElementById("Modal_Exp").onclick = unshow_modal;
+
+document.getElementById("Iye").onclick = show_modal;
+document.getElementById("Close_Iye").onclick = unshow_modal;
+document.getElementById("Modal_Iye").onclick = unshow_modal;
+
+document.getElementById("Yin").onclick = show_modal;
+document.getElementById("Close_Yin").onclick = unshow_modal;
+document.getElementById("Modal_Yin").onclick = unshow_modal;
+
+document.getElementById("Flx").onclick = show_modal;
+document.getElementById("Close_Flx").onclick = unshow_modal;
+document.getElementById("Modal_Flx").onclick = unshow_modal;
+
+</script>
+
+	<div class="container">
+		<ul class="SocMedFoot mb-0">
+			<li> <a href="https://www.instagram.com/thespace.juhu/" target="_blank">
+					<img src="Images/Socmed/Insta.png" alt="Instagram logo & link" />
+			</a></li>
+			<li> <a href="https://www.facebook.com/TheSpace.Mumbai/timeline" target="_blank">
+					<img src="Images/Socmed/Face.png" alt="Facebook logo & link" />
+			</a></li>
+			<li> <a href="https://wa.me/919619348427" target="_blank"> <img src="Images/Socmed/Whatsapp.png" alt="Watsapp call" /></a></li>
+	    </ul>
+
+		<p  class="GeneralText text-right">
+			The Space, A.B. Nair Rd, Juhu<br>
+			(Next to Bayroute, Opp. Chin Chin Chu)<br>
+			Mumbai, Maharashtra 400049
+		</p>
+	 
+	</div>
+	
+<script>
+var length = document.getElementsByClassName('Term1').length;
+for(var i=0; i< length; i++) {
+  document.getElementsByClassName('Term1')[i].innerHTML = "This booking will not be refunded or exchanged, so please ensure you have read our <a class ='btn btn-info btn-generaltext' href='Policy.html'>Product Policy</a> and understand the product before completing your purchase.";
+}
+ var length = document.getElementsByClassName('Term2').length;
+for(var i=0; i< length; i++) {
+  document.getElementsByClassName('Term2')[i].innerHTML = "Please read here before arrival <a class ='btn btn-info btn-generaltext' href='Attend.html'>Attend a Class</a> so you are prepared for your first class."; 
+  }
+</script>
+
+</body>
+</html>
+

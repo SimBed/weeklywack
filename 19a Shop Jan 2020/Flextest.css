@@ -1,0 +1,55 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content:center;
+}
+
+
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 20%;
+  max-width: 20%;
+  padding: 0 4px;
+}
+
+
+
+.column img {
+  margin-top: 8px;
+ 
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column {
+    flex: 40%;
+    max-width: 40%;
+  }
+  .flextext {
+	    flex: 78%;
+    max-width: 78%;
+  }
+	  
+}
+
+
+.panel-title a {
+	color:black;
+	font-style:italic;
+	font-size: 1.3rem;
+}
+
+.btn-fullpower {
+    white-space: normal;
+    line-height: 1.25;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1.3em;
+    border-radius: 1.0rem;
+    background-color:  #635869;
+    color: white;
+    border-color: #635869;
+	
+

@@ -1,0 +1,120 @@
+
+
+.TimetableTable {
+   background-color: #dddddd;
+   border-spacing: 0;
+   border-top-right-radius: 0.6em;
+   border-top-left-radius: 0.6em;
+   font-size: 0.75em;
+   color: #707070;
+   font-weight:bold;
+   font-family: "Muli", "Arial";
+   margin-left:0;
+   margin-top:-0.5em;
+   margin-bottom:2.5em;
+   text-align:center;
+   width:100%;
+  }
+  
+   @media (max-width: 768px) {
+	.TimetableTable {
+    font-size: 0.6em;
+	}
+ }
+    
+ .TimetableTable tr:hover {background-color: white}
+ 
+ .TimetableTable td {
+	 width:15%;
+ }
+ 
+  
+ .Instructor {
+ font-size: 0.8em;
+ font-weight:normal;
+ }
+ 
+ .Unimportant  {
+	 display:none;
+  }
+  
+  @media (min-width: 576px) {
+	.Unimportant  {
+	display:none;
+	}
+  }
+
+  @media (min-width: 768px) {
+	.Unimportant  {
+	display:none;
+	}
+  }
+
+  @media (min-width: 992px) {
+	.Unimportant  {
+	display:none;
+	}
+  }
+
+  @media (min-width: 1200px) {
+	.Unimportant  {
+	display:none;
+	}
+  }
+  
+   .VUnimportant  {
+	 display:none;
+  }
+  
+  @media (min-width: 576px) {
+	.VUnimportant  {
+	display:inline;
+	}
+  }
+
+  @media (min-width: 768px) {
+	.VUnimportant  {
+	display:inline;
+	}
+  }
+
+  @media (min-width: 992px) {
+	.VUnimportant  {
+	display:inline;
+	}
+  }
+
+  @media (min-width: 1200px) {
+	.VUnimportant  {
+	display:inline;
+	}
+  }
+
+  @media (max-width: 992px) {
+  .container {
+    padding-right: 1px;
+    padding-left: 1px;
+  }
+}
+
+ @media (max-width: 576px) {
+  .TimetableTable td , .TimetableTable th{
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.Expired {
+	 background-color: #4a4a4a; /*Color Hex Gray29*/
+}
+
+.Adjusted {
+	 background-color: #799179; /*Color Hex*/
+}
+
+.panel-title a {
+	color:black;
+	font-style:italic;
+	font-size: 1.3rem;
+}
+
